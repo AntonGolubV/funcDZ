@@ -1,0 +1,62 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Document</title>  
+</head>  
+<body>  
+    <script>  
+        /* Задание 4 */ 
+        let arr = []; 
+        let val = +prompt('Введите количество сотрудников'); 
+        let val2 = +prompt('Введите з/п'); 
+        let value = 0; 
+        let value1 = 0; 
+        function TaskA(a){ 
+            for(let i = 0; i < val; i++){  
+                let obj = {}; 
+                obj.name = prompt('Введите имя сотрудника'); 
+                obj.zp = +prompt('Введите з/п сотрудника'); 
+                arr.push(obj);           
+            } 
+        } 
+
+    function TaskB(){ 
+                for(let item of arr){ 
+                    if(item.zp > val2){ 
+                    console.log(item.zp); 
+                    console.log(item.name); 
+                    } 
+                } 
+            } 
+
+       function TaskC(){
+              for(let item of arr){
+                for(let key in item){
+                    if(key == 'zp'){
+                         value +=  item.zp;
+                    }
+                }
+            }
+                console.log(`сумма з/п ${value}`); 
+        }
+
+    function TaskD(){            
+            value1 = value/val;
+            console.log(`средняя зарплата сотрудников: ${value1}`);        
+        }
+            console.log(arr); 
+ 
+        TaskA(arr);  
+        TaskB(); 
+        TaskC();
+        TaskD();
+          
+     
+ 
+       
+    </script>  
+</body>  
+</html>
